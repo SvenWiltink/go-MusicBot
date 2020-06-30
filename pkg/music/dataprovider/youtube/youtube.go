@@ -21,7 +21,7 @@ const (
 	MaxYoutubeItems = 500
 )
 
-var youtubeURLRegex = regexp.MustCompile(`^(https?://)?(www\.)?(youtube\.com|youtu\.?be)/.+$`)
+var youtubeURLRegex = regexp.MustCompile(`^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$`)
 
 type DataProvider struct {
 	apiKey  string
